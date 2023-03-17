@@ -7,17 +7,17 @@
 <body>
 	<h1>Calculadora de Promedios</h1>
 	<form>
-		<label for="certamen1">Certamen 1:</label>
-		<input type="number" id="certamen1" name="certamen1"><br>
+		<label for="nota1">Nota 1 (entre 1 y 7):</label>
+		<input type="number" id="nota1" name="nota1" min="1" max="7" step="0.1"><br>
 
-		<label for="certamen2">Certamen 2:</label>
-		<input type="number" id="certamen2" name="certamen2"><br>
+		<label for="nota2">Nota 2 (entre 1 y 7):</label>
+		<input type="number" id="nota2" name="nota2" min="1" max="7" step="0.1"><br>
 
-		<label for="Examen">Examen:</label>
-		<input type="number" id="Examen" name="Examen"><br>
+		<label for="nota3">Nota 3 (entre 1 y 7):</label>
+		<input type="number" id="nota3" name="nota3" min="1" max="7" step="0.1"><br>
 
-		<button onclick="calcularPromedio()">Calcular promedio</button>
-		<p>El promedio es: <span id="promedio"></span></p>
+		<button onclick="calcularPromedioPonderado()">Calcular promedio ponderado</button>
+		<p>El promedio ponderado es: <span id="promedio"></span></p>
 		<p>El estudiante ha: <span id="resultado"></span></p>
 	</form>
 </body>
