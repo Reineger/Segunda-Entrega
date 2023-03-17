@@ -1,3 +1,9 @@
+var formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+  calcularPromedioPonderado();
+});
+
 function calcularPromedioPonderado() {
   // Obtiene los valores ingresados por el usuario
   var nota1 = parseFloat(document.getElementById("nota1").value);
