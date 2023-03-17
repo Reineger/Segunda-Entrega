@@ -5,27 +5,27 @@ formulario.addEventListener("submit", function(event) {
 });
 
 function calcularPromedioPonderado() {
-  // Obtiene los valores ingresados por el usuario
+  // Recolectar los valores ingresados por el usuario (valores entre 1-7 considerando decimales)
   var nota1 = parseFloat(document.getElementById("nota1").value);
   var nota2 = parseFloat(document.getElementById("nota2").value);
   var nota3 = parseFloat(document.getElementById("nota3").value);
 
-  // Verifica que las notas estén en el rango de 1 a 7
+  // Verificador que los valores estan entre 1-7
   if (nota1 < 1 || nota1 > 7 || nota2 < 1 || nota2 > 7 || nota3 < 1 || nota3 > 7) {
     alert("Las notas deben estar entre 1 y 7");
     return;
   }
 
-  // Calcula el promedio ponderado
+  // Calcula el promedio ponderado + el uso de %
   var promedio = (nota1 * 0.2) + (nota2 * 0.3) + (nota3 * 0.5);
 
-  // Verifica si el estudiante aprobó o no
+  // Mensaje si aprueba o reprueba
   if (promedio >= 4) {
     document.getElementById("resultado").innerHTML = "Aprobado";
   } else {
     document.getElementById("resultado").innerHTML = "Reprobado";
   }
 
-  // Muestra el resultado del promedio ponderado
+  // Mostrar el promedio ponderado
   document.getElementById("promedio").innerHTML = promedio;
 }
