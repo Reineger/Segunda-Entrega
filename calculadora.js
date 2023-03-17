@@ -20,7 +20,7 @@ function calcularPromedioPonderado() {
   var promedio = (nota1 * 0.2) + (nota2 * 0.3) + (nota3 * 0.5);
 
   // Mensaje si aprueba o reprueba
-  if (promedio >= 4) {
+  if (promedio >= 3.95) {
     document.getElementById("resultado").innerHTML = "Aprobado";
   } else {
     document.getElementById("resultado").innerHTML = "Reprobado";
