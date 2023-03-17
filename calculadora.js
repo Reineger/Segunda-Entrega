@@ -1,19 +1,19 @@
-function calcularPromedio() {
+function calcularPromedioPonderado() {
   // Obtiene los valores ingresados por el usuario
-  var nota1 = parseInt(document.getElementById("nota1").value);
-  var nota2 = parseInt(document.getElementById("nota2").value);
-  var nota3 = parseInt(document.getElementById("nota3").value);
+  var certamen1 = parseInt(document.getElementById("certamen1").value);
+  var certamen2 = parseInt(document.getElementById("certamen2").value);
+  var Examen = parseInt(document.getElementById("Examen").value);
 
-  // Calcula el promedio
-  var promedio = (nota1 + nota2 + nota3) / 3;
+  // Calculo del promedio ponderado + sus %
+  var promedio = (certamen1 * 0.2) + (certamen2 * 0.3) + (Examen * 0.5);
 
-  // Verifica si el estudiante aprobó o no
+  // Verificador aprueba o reprueba
   if (promedio >= 4) {
     document.getElementById("resultado").innerHTML = "Aprobado";
   } else {
     document.getElementById("resultado").innerHTML = "Reprobado";
   }
 
-  // Muestra el resultado del promedio
+  // Muestra el resultado del promedio ponderado
   document.getElementById("promedio").innerHTML = promedio;
 }
